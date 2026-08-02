@@ -1,36 +1,58 @@
 const projects = [
   {
-    title: 'Containerized App Deployment with Docker, K8s & CI/CD',
+    title: "Portfolio — CI/CD on AWS",
     description:
-      'Containerized a web app with Docker, published images to Docker Hub, and deployed to Kubernetes with self-healing and replica-based scaling. GitHub Actions CI/CD cut deployment time from 15 minutes to under 3.',
-    tech: 'Docker, Docker Hub, Kubernetes, GitHub Actions, AWS, CloudWatch',
+      "React site deployed to S3 + CloudFront via GitHub Actions, with OIDC-based authentication and infrastructure fully defined in Terraform.",
+    tech: ["Terraform", "AWS S3", "CloudFront", "GitHub Actions", "OIDC"],
   },
   {
-    title: 'Cloud Infrastructure Automation with Terraform & Ansible',
+    title: "Containerized App Deployment",
     description:
-      'Provisioned AWS infrastructure (VPC, EC2, IAM, S3, Route 53) using modular Terraform configs with a remote S3 backend for state management. Ansible playbooks automated server configuration and deployment.',
-    tech: 'Terraform, Ansible, AWS, GitHub Actions',
+      "Containerized a web app with Docker, deployed to Kubernetes with self-healing pods and replica-based scaling. CI/CD cut deploy time from 15 minutes to under 3.",
+    tech: ["Docker", "Kubernetes", "GitHub Actions", "CloudWatch"],
   },
   {
-    title: 'Highly Available 3-Tier Web App Architecture on AWS',
+    title: "Cloud Infra Automation",
     description:
-      'Designed a multi-AZ VPC with public/private subnets for Web, App, and DB tiers. Built Auto Scaling Groups and ALBs, a Bastion Host for secure access, and per-tier security groups with an RDS MySQL backend.',
-    tech: 'AWS (VPC, EC2, ASG, ALB, RDS, IAM), MySQL, Linux, Bash',
+      "Provisioned AWS infrastructure with modular Terraform and a remote S3 backend for state. Ansible playbooks automated server configuration.",
+    tech: ["Terraform", "Ansible", "AWS", "Route 53"],
+  },
+  {
+    title: "Highly Available 3-Tier Architecture",
+    description:
+      "Multi-AZ VPC with public/private subnets, Auto Scaling Groups, Application Load Balancers, a Bastion Host, and an RDS MySQL backend.",
+    tech: ["VPC", "EC2", "ALB", "RDS", "MySQL"],
   },
 ]
 
 export default function Projects() {
   return (
-    <section id="projects" className="max-w-5xl mx-auto px-6 py-16">
-      <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Projects</h2>
-      <div className="grid md:grid-cols-3 gap-6">
-        {projects.map((p) => (
-          <div key={p.title} className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-            <h3 className="font-semibold text-gray-900 mb-2">{p.title}</h3>
-            <p className="text-sm text-gray-600 mb-3">{p.description}</p>
-            <p className="text-xs text-gray-400">{p.tech}</p>
-          </div>
-        ))}
+    <section id="projects" className="border-b border-line">
+      <div className="max-w-4xl mx-auto px-6 py-20">
+        <div className="font-mono text-xs text-faint mb-2">// PROJECTS</div>
+        <h2 className="font-display text-2xl font-semibold text-ink mb-10">What I've built</h2>
+
+        <div className="grid md:grid-cols-2 gap-4">
+          {projects.map((p) => (
+            <div
+              key={p.title}
+              className="border border-line bg-panel rounded-lg p-6 hover:border-amber/50 transition-colors"
+            >
+              <h3 className="font-display font-medium text-ink mb-2">{p.title}</h3>
+              <p className="text-sm text-faint leading-relaxed mb-4">{p.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {p.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="font-mono text-[10px] text-teal border border-line rounded px-2 py-1"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

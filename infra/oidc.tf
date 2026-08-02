@@ -18,12 +18,14 @@ resource "aws_iam_role" "github_actions" {
           Federated = aws_iam_openid_connect_provider.github.arn
         }
         Action = "sts:AssumeRoleWithWebIdentity"
-        Condition = {
+         Condition = {
           StringEquals = {
-            "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
+            "token.actions.githubusercontent.com:aud"               = "sts.amazonaws.com"
+            "token.actions.githubusercontent.com:repository_id"      = "1320097761"
+            "token.actions.githubusercontent.com:repository_owner_id" = "172504124"
           }
           StringLike = {
-            "token.actions.githubusercontent.com:sub" = "repo:thepradeepz/oidc-practice-portfolio:*"
+            "token.actions.githubusercontent.com:sub" = "repo:thepradeepz@172504124/oidc-practice-portfolio@1320097761:*"
           }
         }
       }

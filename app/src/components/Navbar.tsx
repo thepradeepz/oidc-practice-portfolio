@@ -1,12 +1,19 @@
 export default function Navbar() {
   return (
-    <nav className="w-full border-b border-gray-200 bg-white/80 backdrop-blur sticky top-0 z-50">
-      <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-        <span className="font-semibold text-lg text-gray-900">Pradeep K</span>
-        <div className="flex gap-6 text-sm text-gray-600">
-          <a href="#about" className="hover:text-gray-900">About</a>
-          <a href="#projects" className="hover:text-gray-900">Projects</a>
-          <a href="#contact" className="hover:text-gray-900">Contact</a>
+    <nav className="sticky top-0 z-50 border-b border-line bg-base/90 backdrop-blur">
+      <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="flex flex-col leading-tight">
+          <span className="font-display text-sm font-semibold text-ink tracking-tight">
+            Pradeep K
+          </span>
+          <span className="font-mono text-[10px] text-amber tracking-wide">
+            DEVOPS · CLOUD ENGINEER
+          </span>
+        </div>
+        <div className="flex gap-6 font-mono text-xs text-faint">
+          <a href="#about" className="hover:text-ink transition-colors">about</a>
+          <a href="#projects" className="hover:text-ink transition-colors">projects</a>
+          <a href="#contact" className="hover:text-ink transition-colors">contact</a>
         </div>
       </div>
     </nav>
