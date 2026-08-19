@@ -11,27 +11,28 @@ const highlights = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="border-b border-line">
-      <div className="max-w-4xl mx-auto px-6 py-20">
-        <div className="font-mono text-xs text-faint mb-2">// EXPERIENCE</div>
-        <h2 className="font-display text-2xl font-semibold text-ink mb-8">Where I've worked</h2>
+    <section id="experience" className="max-w-4xl mx-auto px-6 py-16">
+      <div className="flex items-baseline gap-3 mb-8">
+        <span className="font-mono text-xs text-amber">01</span>
+        <h2 className="font-display text-xl font-semibold text-ink">Experience</h2>
+        <div className="flex-1 h-px bg-line" />
+      </div>
 
-        <div className="border border-line bg-panel rounded-lg p-6">
-          <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-            <h3 className="font-display font-medium text-ink">Cloud &amp; DevOps Engineer</h3>
-            <span className="font-mono text-xs text-teal">March 2025 — Present</span>
-          </div>
-          <div className="font-mono text-xs text-faint mb-5">SOR Tech Solutions · Hyderabad, Telangana, India</div>
-
-          <ul className="space-y-3">
-            {highlights.map((point) => (
-              <li key={point} className="flex gap-3 text-sm text-faint leading-relaxed">
-                <span className="text-amber mt-1.5 shrink-0">▸</span>
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
+      <div className="pl-6 border-l-2 border-line">
+        <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+          <h3 className="font-display font-medium text-ink">Cloud &amp; DevOps Engineer</h3>
+          <span className="font-mono text-xs text-teal">March 2025 — Present</span>
         </div>
+        <div className="font-mono text-xs text-faint mb-5">SOR Tech Solutions · Hyderabad, Telangana, India</div>
+
+        <ul className="space-y-3">
+          {highlights.map((point) => (
+            <li key={point} className="flex gap-3 text-sm text-faint leading-relaxed">
+              <span className="text-amber mt-1.5 shrink-0 text-xs">▸</span>
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )
