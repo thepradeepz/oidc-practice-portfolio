@@ -25,7 +25,7 @@ export default function Projects() {
   return (
     <section id="projects" className="max-w-4xl mx-auto px-6 py-16">
       <div className="flex items-baseline gap-3 mb-8">
-        <span className="font-mono text-xs text-amber">02</span>
+        <span className="font-mono text-xs text-amber">01</span>
         <h2 className="font-display text-xl font-semibold text-ink">Projects</h2>
         <div className="flex-1 h-px bg-line" />
       </div>
