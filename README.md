@@ -2,7 +2,7 @@
 
 A follow-up project built to properly implement OIDC-based authentication between GitHub Actions and AWS, after hitting and resolving a real authorization issue during my original assignment submission.
 
-**Live site:** https://d1nexanhwb10ci.cloudfront.net
+ 
 **Repository:** https://github.com/thepradeepz/oidc-practice-portfolio
 
 ---
